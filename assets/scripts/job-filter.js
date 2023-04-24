@@ -1,6 +1,7 @@
-import fetchData from "./fake-data.js"
-import cardsData from "./cards.js"
-const jobData = await fetchData();
+import fetchData from "./fetch-data.js"
+
+
+import sampleData from "./full-description.js"
 
 const searchInput = document.querySelector("#searchInput");
 const locationInput = document.querySelector("#locInput");
@@ -36,5 +37,4 @@ locationInput.addEventListener('input', () => {
   })
 })
 
-
-export {jobData, searchInput, locationInput};
+export {searchInput, locationInput};

@@ -1,10 +1,8 @@
 
 // imported module
-import fetchData from "./fake-data.js"
-import cardsData from "./cards.js"
-import {jobData} from "./job-filter.js"
+import fetchData from "./fetch-data.js"
 import {searchInput} from "./job-filter.js"
-cardsData();
+import sampleData from "./full-description.js"
 
 // exported
 const dropdownBtn = document.querySelector("#dropdownBtn");
