@@ -54,7 +54,6 @@ sampleData.forEach(i => {
 
   jobCard.addEventListener("click", () => {
     let array1 = Array.from(jobFullDes.children);
-    console.log(array1);
     array1.forEach(i =>{
       i.remove();
     })
@@ -68,7 +67,8 @@ sampleData.forEach(i => {
     <h3 class="job-title">${i.jobTitle}</h3>
     <span class="job-company">${i.company}</span>
     <span class="job-location">${i.location}</span>
-    <span class="date"><b>Date posted:</b> ${new Date(i.date)}</span>
+    <span class="date"><b>Date posted: </b> ${new Date(i.date)}</span>
+    <button class="apply-btn">Apply Now</button>
     `;
     fullDesDiv.appendChild(applyDiv);
   });
