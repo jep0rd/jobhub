@@ -109,6 +109,10 @@ jobData.forEach(i => {
   
       let fullDesContainer = document.createElement("div")
       fullDesContainer.classList.add("flex-c", "full-des")
+      fullDesBody.innerHTML =
+      `
+      <span class="material-symbols-outlined absolute" id="closeBtn">close</span>
+      `;
       fullDesBody.appendChild(fullDesContainer);
       let applyDiv = document.createElement("div");
       applyDiv.classList.add("flex-c","apply-div", "relative")
@@ -139,6 +143,17 @@ jobData.forEach(i => {
       <span>${i.category}</span>
       `;
       fullDesBody.appendChild(desDiv);
+
+      let closeBtn = document.querySelector("#closeBtn");
+      closeBtn.onclick = () => {
+        fullDesModal.classList.add("hide");
+      };
+
+      window.onclick = (e) => {
+        if(e.target == fullDesModal){
+          fullDesModal.classList.add("hide");
+        }
+      }
     }
   });
 })
