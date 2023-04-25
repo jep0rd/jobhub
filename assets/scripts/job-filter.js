@@ -7,7 +7,7 @@ const searchInput = document.querySelector("#searchInput");
 const locationInput = document.querySelector("#locInput");
 
 searchInput.addEventListener('input', () => {
-  // document.querySelector("#locInput").value = "";
+  document.querySelector("#locInput").value = "";
   let filteredValue = searchInput.value.toLowerCase();
   let jobCard = document.querySelectorAll(".job-card");
 
@@ -23,7 +23,7 @@ searchInput.addEventListener('input', () => {
 });
 
 locationInput.addEventListener('input', () => {
-  // document.querySelector("#searchInput").value = "";
+  document.querySelector("#searchInput").value = "";
   let filteredValue = locationInput.value.toLowerCase();
   let locSource = document.querySelectorAll(".job-location");
   locSource.forEach(x =>{

@@ -24,10 +24,22 @@
   margin: 0;
   font-family: 'Lato', sans-serif;
 }
+a{
+  color: var(--darkgray);
+  text-decoration: none;
+}
 
 body{
   background: var(--bgcolor);
   margin-inline: auto;
+}
+
+body::-webkit-scrollbar{
+  width: 5px;
+}
+body::-webkit-scrollbar-thumb{
+  background: var(--indigo);
+  border-radius: 3px;
 }
 
 /* flex classes */
@@ -87,12 +99,79 @@ ul{
   padding: 0 15px;
   align-items: center;
   top: 0;
-  z-index: 3;
+  z-index: 5;
 }
 .material-symbols-outlined{
   margin: 0;
   color: var(--darkgray);
   line-height: -2px;
+}
+#menuBtn{
+  cursor: pointer;
+}
+.menu-container{
+  top: 50px;
+  width: 100%;
+  height: 100vh;
+  z-index: 4;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+.menu-container.display{
+  display: flex;
+}
+
+.menu-list{
+  height: auto;
+  background: var(--bgcolor);
+  padding: 0 20px 20px;
+  height: auto;
+  gap: 10px;
+}
+
+
+.menu-list .menu-item-list{
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+.account-btns-container{
+  margin-top: 30px;
+}
+.account-btns-container.flex-r{
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 0px;
+  gap: 5px;
+  flex-grow: 2;
+  flex-shrink: 100;
+  display: none;
+}
+.account-btns-container.flex-r > *{
+  margin: 0;
+}
+
+.account-btns-container.flex-r .login-btn{
+  font-size: 1rem;
+}
+.account-btns-container.flex-r .create-btn{
+  font-size: 1rem;
+}
+
+.login-btn{
+  font-size: 1.2rem;
+  font-weight: bolder;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.create-btn{
+  max-width: 200px;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  background: var(--white);
+  border: 3px solid var(--indigo);
+  padding-block: 5px;
+  cursor: pointer;
 }
 .nav-logo{
   margin: 0;
@@ -103,14 +182,25 @@ ul{
   text-transform: uppercase;
   font-family: 'Manrope', sans-serif; 
 }
-.navigation-section::after{
-  content: '';
-  position: absolute;
-  width: 100%;
-  left: 0;
-  bottom: 0;
-  border-bottom: 2px solid var(--lightgray);
+
+.nav-list{
+  flex-grow: 3;
+  flex-shrink: 0;
+  justify-content: space-evenly;
+  display: none;
 }
+.nav-list > *{
+
+  text-align: center;
+}
+
+.menu-item-list{
+  font-size: 1rem;
+  font-weight: bolder;
+  
+}
+
+
 /* navigation bar end */
 
 /* filter-section */
@@ -490,5 +580,17 @@ ul{
 @media all and (min-width: 760px){
   .job-fulldes-container{
     display: flex;
+  }
+  .nav-list{
+    display: flex;
+  }
+  .account-btns-container.flex-r{
+    display: flex;
+  }
+  #menuBtn{
+    display: none;
+  }
+  .nav-logo{
+    padding-inline: 0;
   }
 }

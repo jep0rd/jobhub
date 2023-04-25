@@ -12,9 +12,37 @@
 <body>
   <!-- navigation section -->
   <nav class="navigation-section flex-r fixed">
-    <span class="material-symbols-outlined">menu</span>
-    <span class="nav-logo">JOBHUB.</span>
+    <span class="material-symbols-outlined" id="menuBtn">menu</span>
+    <span class="nav-logo">JOBHUB</span>
+    <ul class="nav-list flex-r">
+      <li class="menu-item-list"><a href="index.html">Find Work</a></li>
+      <li class="menu-item-list"><a href="#0">Company Profiles</a></li>
+      <li class="menu-item-list"><a href="#0">Career Advice</a></li>
+    </ul>
+    <div class="account-btns-container flex-r">
+      <span class="login-btn">Sign in</span>
+      <button class="create-btn">Create Account</button>
+    </div>
   </nav>
+  <div class="menu-container flex-c fixed">
+    <ul class="menu-list flex-c">
+      <li class="menu-item-list">
+        <a href="index.html">Find Work</a>
+      </li>
+      <li class="menu-item-list">
+        <a href="#0">Company Profiles</a>
+      </li>
+      <li class="menu-item-list">
+        <a href="#0">Career Advice</a>
+      </li>
+      <li class="menu-item-list">
+        <div class="account-btns-container flex-c">
+          <span class="login-btn">Sign in</span>
+          <button class="create-btn">Create Account</button>
+        </div>
+      </li>
+    </ul>
+  </div>
 
   <!-- filter section -->
   <section class="filter-section flex-r flex-wrap sticky">
@@ -59,21 +87,6 @@
   </section>
   <main class="main-body flex-r relative">
     <ul class="job-cards-container flex-c">
-      <!-- <li class="job-card flex-c">
-        <div class="job-result-source flex-c">
-          <h3 class="job-title">Job title</h3>
-          <span class="job-company">Company</span>
-          <span class="job-location">Location</span>
-        </div>
-        <div class="job-other-details flex-c">
-          <span class="job-salary">PHP 35,000 - PHP 50,000 per month</span>
-          <span class="work-type">Full-time</span>
-          <span class="work-type">Onsite</span>
-        </div>
-        <small class="job-requirements">requirements</small>
-        <span class="required-experience">2+ years of customer support experience</span>
-        <small class="date">Thu, Apr 20 2023</small>
-      </li> -->
     </ul>
     <section class="job-fulldes-container flex-c sticky">
     </section>
