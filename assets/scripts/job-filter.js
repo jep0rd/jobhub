@@ -1,7 +1,7 @@
 import fetchData from "./fetch-data.js"
 
 
-import sampleData from "./full-description.js"
+import sampleData from "./job-list.js"
 
 const searchInput = document.querySelector("#searchInput");
 const locationInput = document.querySelector("#locInput");

@@ -56,10 +56,9 @@ sampleData.forEach(i => {
     array1.forEach(i =>{
       i.remove();
     })
-    let skills = i.skillsRequired.join(", ");
-    let jobType = i.workType.join(" | ")
 
-    console.log(skills);
+    let skills = i.skillsRequired.join("<br>");
+    let jobType = i.workType.join(" | ")
 
     let fullDesContainer = document.createElement("div")
     fullDesContainer.classList.add("flex-c", "full-des")

@@ -259,6 +259,7 @@ ul{
 .other-filter-container{
   max-width: 350px;
   width: 100%;
+  justify-content: flex-end;
   height: auto;
   gap: 10px;
 }
