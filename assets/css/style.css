@@ -417,8 +417,7 @@ ul{
   margin-bottom: 20px;
 }
 .job-salary{
-  background: var(--green);
-  border: 2px solid var(--darkgray);
+  background: var(--lightgray);
   border-radius: 3px;
   color: var(--darkgray);
   font-weight: bold;
@@ -428,7 +427,6 @@ ul{
 }
 .work-type{
   background: var(--lightgray);
-  border: 2px solid var(--gray);
   border-radius: 3px;
   color: var(--darkgray);
   font-weight: bold;
