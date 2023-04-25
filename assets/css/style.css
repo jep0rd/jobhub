@@ -265,6 +265,7 @@ ul{
 .dropdown{
   max-width: 350px;
   width: 100%;
+  justify-self: flex-start;
 }
 .job-dropdown{
   font-size: 1rem;
@@ -343,27 +344,6 @@ ul{
   box-shadow: 0px 2px 8px var(--darkgray);
 }
 /* filter section end */
-
-
-/* other filter */
-.other-filter-container{
-  max-width: 350px;
-  width: 100%;
-  justify-content: flex-end;
-  height: auto;
-  gap: 10px;
-}
-.other-filter-btn{
-  background: none;
-  border: 2px solid var(--lightgray);
-  border-radius: 3px;
-  padding: 9px 20px;
-  color: var(--lightgray);
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: 800;
-}
-/* other filter end  */
 
 /* main body */
 .main-body{
@@ -575,7 +555,22 @@ ul{
 }
 
 
-
+#fullDesModal{
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 6;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 10px;
+}
+.fulldes-body{
+  background: var(--white);
+  max-width: 100%;
+  height: 100%;
+  padding: 20px;
+}
 /* media query */
 @media all and (min-width: 760px){
   .job-fulldes-container{
@@ -592,5 +587,39 @@ ul{
   }
   .nav-logo{
     padding-inline: 0;
+  }
+}
+
+@media all and (max-width: 760px){
+  .des-div{
+    max-height: 390px;
+    padding-block: 20px;
+    color: var(--darkgray);
+    overflow-y: scroll;
+  }
+  .apply-div .job-title{
+    font-size: 1.3rem;
+  }
+  .apply-div .job-company{
+    font-size: 1.2rem;
+  }
+  .apply-div .job-location{
+    font-size: 1rem;
+  }
+  .apply-div .date{
+    font-size: .9rem;
+  }
+  .full-des-title{
+    font-size: 1.3rem;
+  }
+  .full-des-title ~ p{
+    font-size: 1rem;
+    text-align: left;
+  }
+  .full-des-experience, .full-des-skills, .full-des-jobtype, .full-des-salary, .full-des-category{
+    font-size: 1.1rem;
+  }
+  .des-div span{
+    font-size: 1rem;
   }
 }

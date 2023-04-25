@@ -1,10 +1,12 @@
 import fetchData from "./fetch-data.js";
 
-let sampleData = await fetchData();
+let jobData = await fetchData();
 
-sampleData.forEach(i => {
+jobData.forEach(i => {
   let jobResult = document.querySelector(".job-cards-container");
   let jobFullDes = document.querySelector(".job-fulldes-container");
+  let fullDesModal = document.querySelector("#fullDesModal")
+  let fullDesBody = document.querySelector(".fulldes-body")
   let jobCard = document.createElement("li");
   jobCard.classList.add("job-card","flex-c","relative");
   jobResult.appendChild(jobCard);
@@ -52,47 +54,93 @@ sampleData.forEach(i => {
   jobCard.setAttribute("value", i.jobTitle + " " + i.company);
 
   jobCard.addEventListener("click", () => {
-    let array1 = Array.from(jobFullDes.children);
-    array1.forEach(i =>{
-      i.remove();
-    })
 
-    let skills = i.skillsRequired.join("<br>");
-    let jobType = i.workType.join(" | ")
+    if(getComputedStyle(jobFullDes).display !== "none"){
+      console.log(jobFullDes)
 
-    let fullDesContainer = document.createElement("div")
-    fullDesContainer.classList.add("flex-c", "full-des")
-    jobFullDes.appendChild(fullDesContainer);
-    let applyDiv = document.createElement("div");
-    applyDiv.classList.add("flex-c","apply-div", "relative")
-    applyDiv.innerHTML = 
-    `
-    <h3 class="job-title">${i.jobTitle}</h3>
-    <span class="job-company">${i.company}</span>
-    <span class="job-location">${i.location}</span>
-    <span class="date"><b>Date posted: </b> ${new Date(i.date)}</span>
-    <button class="apply-btn">Apply Now</button>
-    `;
-    fullDesContainer.appendChild(applyDiv);
-    let desDiv = document.createElement("div");
-    desDiv.classList.add("flex-c", "des-div")
-    desDiv.innerHTML =
-    `
-    <h1 class="full-des-title">Job Description:</h1>
-    <p>${i.description}</p>
-    <h3 class="full-des-experience">Required Experience:</h3>
-    <span>${i.requiredExperience}</span>
-    <h3 class="full-des-experience">Required Skills:</h3>
-    <span>${skills}</span>
-    <h3 class="full-des-jobtype">Job Type:</h3>
-    <span>${jobType}</span>
-    <h3 class="full-des-salary">Salary:</h3>
-    <span>${i.salary}</span>
-    <h3 class="full-des-category">Category:</h3>
-    <span>${i.category}</span>
-    `;
-    fullDesContainer.appendChild(desDiv);
+      let array1 = Array.from(jobFullDes.children);
+      array1.forEach(i =>{
+        i.remove();
+      })
+      
+      let skills = i.skillsRequired.join("<br>");
+      let jobType = i.workType.join(" | ")
+  
+      let fullDesContainer = document.createElement("div")
+      fullDesContainer.classList.add("flex-c", "full-des")
+      jobFullDes.appendChild(fullDesContainer);
+      let applyDiv = document.createElement("div");
+      applyDiv.classList.add("flex-c","apply-div", "relative")
+      applyDiv.innerHTML = 
+      `
+      <h3 class="job-title">${i.jobTitle}</h3>
+      <span class="job-company">${i.company}</span>
+      <span class="job-location">${i.location}</span>
+      <span class="date"><b>Date posted: </b> ${new Date(i.date)}</span>
+      <button class="apply-btn">Apply Now</button>
+      `;
+      fullDesContainer.appendChild(applyDiv);
+      let desDiv = document.createElement("div");
+      desDiv.classList.add("flex-c", "des-div")
+      desDiv.innerHTML =
+      `
+      <h1 class="full-des-title">Job Description:</h1>
+      <p>${i.description}</p>
+      <h3 class="full-des-experience">Required Experience:</h3>
+      <span>${i.requiredExperience}</span>
+      <h3 class="full-des-experience">Required Skills:</h3>
+      <span>${skills}</span>
+      <h3 class="full-des-jobtype">Job Type:</h3>
+      <span>${jobType}</span>
+      <h3 class="full-des-salary">Salary:</h3>
+      <span>${i.salary}</span>
+      <h3 class="full-des-category">Category:</h3>
+      <span>${i.category}</span>
+      `;
+      fullDesContainer.appendChild(desDiv);
+    } else{
+      fullDesModal.classList.remove("hide");
+      let array1 = Array.from(fullDesBody.children);
+      array1.forEach(i =>{
+        i.remove();
+      })
+      let skills = i.skillsRequired.join("<br>");
+      let jobType = i.workType.join(" | ")
+  
+      let fullDesContainer = document.createElement("div")
+      fullDesContainer.classList.add("flex-c", "full-des")
+      fullDesBody.appendChild(fullDesContainer);
+      let applyDiv = document.createElement("div");
+      applyDiv.classList.add("flex-c","apply-div", "relative")
+      applyDiv.innerHTML = 
+      `
+      <h3 class="job-title">${i.jobTitle}</h3>
+      <span class="job-company">${i.company}</span>
+      <span class="job-location">${i.location}</span>
+      <span class="date"><b>Date posted: </b> ${new Date(i.date)}</span>
+      <button class="apply-btn">Apply Now</button>
+      `;
+      fullDesContainer.appendChild(applyDiv);
+      let desDiv = document.createElement("div");
+      desDiv.classList.add("flex-c", "des-div")
+      desDiv.innerHTML =
+      `
+      <h1 class="full-des-title">Job Description:</h1>
+      <p>${i.description}</p>
+      <h3 class="full-des-experience">Required Experience:</h3>
+      <span>${i.requiredExperience}</span>
+      <h3 class="full-des-skills">Required Skills:</h3>
+      <span>${skills}</span>
+      <h3 class="full-des-jobtype">Job Type:</h3>
+      <span>${jobType}</span>
+      <h3 class="full-des-salary">Salary:</h3>
+      <span>${i.salary}</span>
+      <h3 class="full-des-category">Category:</h3>
+      <span>${i.category}</span>
+      `;
+      fullDesBody.appendChild(desDiv);
+    }
   });
 })
 
-export default sampleData;
+export default jobData;

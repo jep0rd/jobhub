@@ -3,9 +3,8 @@
 const dropdownBtn = document.querySelector("#dropdownBtn");
 let jobFilter = document.querySelector(".job-filter-list");
 
-dropdownBtn.onclick = (e) => {
+dropdownBtn.onclick = () => {
   dropdownBtn.classList.toggle("display");
-  console.log(e);
 };
 
 
