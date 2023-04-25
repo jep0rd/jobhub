@@ -185,6 +185,7 @@ ul{
 
 .nav-list{
   flex-grow: 3;
+  max-width: 450px;
   flex-shrink: 0;
   justify-content: space-evenly;
   display: none;
