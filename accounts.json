@@ -1,0 +1,10 @@
+{
+    "accounts" : [
+        {
+         "fullname" : "Paul Estrada",
+         "contact" : "09293603139",
+         "age" : "27",
+         "password" : "secret"
+        }
+    ]
+}

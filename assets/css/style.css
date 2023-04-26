@@ -609,7 +609,7 @@ ul{
   display: none;
 }
 /* media query */
-@media all and (min-width: 760px){
+@media all and (min-width: 761px){
   .job-fulldes-container{
     display: flex;
   }
