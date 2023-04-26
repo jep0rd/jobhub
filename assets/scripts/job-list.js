@@ -56,7 +56,6 @@ jobData.forEach(i => {
   jobCard.addEventListener("click", () => {
 
     if(getComputedStyle(jobFullDes).display !== "none"){
-      console.log(jobFullDes)
 
       let array1 = Array.from(jobFullDes.children);
       array1.forEach(i =>{

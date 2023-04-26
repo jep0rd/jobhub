@@ -35,8 +35,12 @@ body{
 }
 
 body::-webkit-scrollbar{
-  width: 0;
-  background: var(--lightgray);
+  width: 5px;
+}
+
+body::-webkit-scrollbar-thumb{
+  background: var(--darkgray);
+  width: 5px;
 }
 
 /* flex classes */
@@ -167,11 +171,18 @@ ul{
 .create-btn{
   max-width: 200px;
   font-size: 1.2rem;
-  font-weight: bolder;
+  font-weight: 800;
   background: var(--white);
-  border: 3px solid var(--indigo);
+  border: 3px outset var(--indigo);
+  border-radius: 5px;
   padding-block: 5px;
   cursor: pointer;
+
+}
+.create-btn:active{
+  border: inset var(--indigo);
+  background-color: var(--lightgray);
+  color: var(--darkgray);
 }
 .nav-logo{
   margin: 0;
@@ -522,10 +533,10 @@ ul{
 }
 
 .des-div::-webkit-scrollbar-thumb{
-  background: var(--indigo);
+  background: var(--darkgray);
 }
 .des-div::-webkit-scrollbar{
-  width: 5px;
+  width: 3px;
 }
 .des-div p{
   margin-block: 10px 40px;
