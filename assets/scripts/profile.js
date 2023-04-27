@@ -1,3 +1,5 @@
+import menuBtn from "./menu-modal.js"
+
 // Get the form element
 var form = document.getElementById("myForm");
 

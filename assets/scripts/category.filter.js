@@ -1,8 +1,6 @@
-
 // variables
 const dropdownBtn = document.querySelector("#dropdownBtn");
 let jobFilter = document.querySelector(".job-filter-list");
-let catItem = document.querySelectorAll(".item");
 
 dropdownBtn.onclick = () => {
   dropdownBtn.classList.toggle("display");
@@ -40,12 +38,20 @@ jobCategories.forEach(i => {
   item.appendChild(jobText);
 });
 
+// console.log(jobFilter.firstElementChild);
 
-catItem.forEach( x => {
-  x.onclick = () => {
-    x.classList.toggle("checked");
+let catItem = document.querySelectorAll(".item");
+
+let filteredcatItem = catItem[1];
+
+console.log(filteredcatItem);
+
+catItem.forEach(item => {
+  item.onclick = () => {
+    item.classList.toggle("checked");
   }
 })
+
 
 
 export default dropdownBtn;
