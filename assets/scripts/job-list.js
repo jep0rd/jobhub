@@ -154,10 +154,12 @@ jobData.forEach(i => {
         }
       }
     }
+
+    let applyBtn = document.querySelector(".apply-btn");
+    applyBtn.onclick = () =>{
+      window.open("login.html");
+    }
   });
 })
-
-let applyBtn = document.querySelector(".apply-btn");
-console.log(applyBtn);
 
 export default jobData;
