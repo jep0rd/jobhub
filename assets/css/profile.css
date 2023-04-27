@@ -38,6 +38,7 @@ a{
 body{
   background: var(--bgcolor);
   margin-inline: auto;
+  height: 100vh;
 }
 
 body::-webkit-scrollbar{
@@ -231,6 +232,7 @@ ul{
   align-items: center;
   text-align: center;
   gap: 10px;
+  bottom: 0;
 }
 .footer-section .nav-logo{
   padding-inline: 0;
@@ -413,14 +415,17 @@ section {
   }
   
   .card {
-    margin: 10px;
+    margin-block: 10px 70px;
     padding: 20px;
     background-color: var(--white);
     border: 1px solid #ccc;
-    border-radius: 5px;f
+    border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0,0,0,.1);
     width: 300px;
+    height: auto;
     max-width: 100%;
+    margin-inline: 20px;
+
   }
   
   .card h2 {
