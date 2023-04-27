@@ -1,6 +1,7 @@
 var signInOptions = document.querySelector("#signInOptions");
 var passwordEntry = document.querySelector("#passwordEntry")
 var nextBtn = document.querySelector("#nextBtn");
+let isSignedIn = false;
 
 nextBtn.onclick = () => {
     signInOptions.style.left = "-450px"
@@ -186,10 +187,14 @@ loginBtn.addEventListener('click', () => {
         
         if (atob(testPasswordInput) === testConfirmedPassword) {
             console.log("match")
-            window.location.href = "index.html";
+            window.location.href = "profile.html";
+            isSignedIn = true;
+
+            if(isSignedIn == true){
+                accountDiv.classList.add("hide");
+              }
         } else {
             console.log("not match")
         }
     }
 })
-

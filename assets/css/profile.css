@@ -110,6 +110,8 @@ ul{
   align-items: center;
   top: 0;
   z-index: 4;
+  border-bottom: 1px solid var(--lightgray);
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
 }
 .material-symbols-outlined{
   margin: 0;
@@ -377,7 +379,7 @@ section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 70px;
   }
   
   .card {
@@ -426,6 +428,13 @@ section {
   .card p {
     margin-bottom: 43px;
     font-weight: bold;
+  }
+
+  .material-symbols-outlined.profile-icon{
+    flex-grow: 2;
+    text-align: right;
+    font-size: 2rem;
+    cursor: pointer;
   }
 
   /* Styles for screens up to 768px */

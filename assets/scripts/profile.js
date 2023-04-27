@@ -1,7 +1,6 @@
-import menuBtn from "./menu-modal.js"
-
 // Get the form element
 var form = document.getElementById("myForm");
+
 
 // Listen for the submit event on the form
 export default form.addEventListener("submit", function (event) {
@@ -83,3 +82,12 @@ export default form.addEventListener("submit", function (event) {
     privacySettingsEl.textContent = data.privacySettings;
   }
 })
+
+let navBar = document.querySelector(".navigation-section");
+let accountDiv = document.querySelector(".account-btns-container");
+accountDiv.remove();
+
+let profileIcon = document.createElement("span");
+profileIcon.classList.add("material-symbols-outlined", "profile-icon");
+profileIcon.innerHTML = "account_circle";
+navBar.appendChild(profileIcon);
