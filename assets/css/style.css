@@ -162,7 +162,7 @@ ul{
   font-size: 1rem;
 }
 
-.login-btn{
+.login-btn a{
   font-size: 1.2rem;
   font-weight: bolder;
   margin-bottom: 5px;
@@ -335,10 +335,15 @@ ul{
   background: #b2b2b24e;
   transition: .3s;
 }
-.check-box-outline .checkmark{
+.checkmark{
   font-size: 1.2rem;
-  color: var(--darkgray);
+  color: var(--white);
+  background-color: var(--green);
   transform: scale(0);
+}
+
+.item.checked .checkmark{
+  transform: scale(1);
 }
 
 .job-dropdown.display ~ .job-filter-container{
