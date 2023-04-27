@@ -157,4 +157,7 @@ jobData.forEach(i => {
   });
 })
 
+let applyBtn = document.querySelector(".apply-btn");
+console.log(applyBtn);
+
 export default jobData;

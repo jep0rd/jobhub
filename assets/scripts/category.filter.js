@@ -42,10 +42,6 @@ jobCategories.forEach(i => {
 
 let catItem = document.querySelectorAll(".item");
 
-let filteredcatItem = catItem[1];
-
-console.log(filteredcatItem);
-
 catItem.forEach(item => {
   item.onclick = () => {
     item.classList.toggle("checked");
