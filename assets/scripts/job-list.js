@@ -97,6 +97,11 @@ jobData.forEach(i => {
       <span>${i.category}</span>
       `;
       fullDesContainer.appendChild(desDiv);
+
+      let applyBtn = document.querySelector(".apply-btn");
+      applyBtn.onclick = () =>{
+        window.open("login.html");
+      }
     } else{
       fullDesModal.classList.remove("hide");
       let array1 = Array.from(fullDesBody.children);
@@ -154,7 +159,6 @@ jobData.forEach(i => {
         }
       }
     }
-
     let applyBtn = document.querySelector(".apply-btn");
     applyBtn.onclick = () =>{
       window.open("login.html");
