@@ -188,11 +188,6 @@ loginBtn.addEventListener('click', () => {
         if (atob(testPasswordInput) === testConfirmedPassword) {
             console.log("match")
             window.location.href = "profile.html";
-            isSignedIn = true;
-
-            if(isSignedIn == true){
-                accountDiv.classList.add("hide");
-              }
         } else {
             console.log("not match")
         }
