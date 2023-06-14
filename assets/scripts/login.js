@@ -190,6 +190,10 @@ loginBtn.addEventListener('click', () => {
             window.location.href = "profile.html";
         } else {
             console.log("not match")
+             setTimeout(() => {
+                console.log('account not found')
+                errorPopup.classList.toggle('active');
+            }, 2000)
         }
     }
 })
